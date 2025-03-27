@@ -1,13 +1,18 @@
 import { useState } from "react"
 import { FaUser, FaLock } from "react-icons/fa"
 
+
 const Login = () => {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
+
+
     const handleSubmit = (event) => {
         event.preventDefault()
+
+        alert("Enviando os dados:" + username + "-" + password)
 
     }
 
@@ -15,7 +20,7 @@ const Login = () => {
         <div className="container">
             <form onSubmit={handleSubmit}>
                 <h1>Acesse o Sistema</h1>
-                <div>
+                <div className="input-field">
                     <input
                         type="email"
                         placeholder="E-mail"
@@ -25,7 +30,7 @@ const Login = () => {
 
                     <FaUser className="icon" />
                 </div>
-                <div>
+                <div className="input-field">
                     <input
                         type="password"
                         placeholder="Senha"
@@ -48,7 +53,7 @@ const Login = () => {
 
                 <div className="signup-link">
                     <p>Nâo tem uma conta?
-                        <a href="#">Resgistar</a>
+                        <a href="#"> Resgistar</a>
                     </p>
                 </div>
 
